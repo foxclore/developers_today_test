@@ -1,0 +1,8 @@
+### How to build application
+
+Run `go get` in root directory, then run `go build` in the same directory
+Make sure config.json is stationed in the root folder
+Then run compiled app
+
+### Potential drawbacks
+Cat names and target names have to be unique
