@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "daee394a-2c18-4470-bfcc-3c7216c707dc",
+		"name": "DevelopersTodat test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11019224"
+	},
+	"item": [
+		{
+			"name": "Cats",
+			"item": [
+				{
+					"name": "Get cats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cats",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create cat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test_cat\",\n    \"experience\": 10,\n    \"breed\": \"malayan\",\n    \"salary\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cats",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update cat salary",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salary\": 1300\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cats/test_cat2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cats",
+								"test_cat2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cats/test_cat",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cats",
+								"test_cat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a cat",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cats/test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cats",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Missions",
+			"item": [
+				{
+					"name": "Create a mission",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"targets\": [\n        {           \n            \"name\": \"test_target2\",\n            \"completed\": false,\n            \"country\": \"UA\"\n        }\n    ],\n    \"completed\": false,\n    \"assigned_cat_name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/missions",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get missions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/missions",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete mission",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/missions/VbZPlDpHJz",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"missions",
+								"VbZPlDpHJz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set mission complete",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/missions/test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"missions",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add target",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test2\",\n    \"completed\": false,\n    \"country\": \"UK\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/missions/test/targets",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"missions",
+								"test",
+								"targets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add notes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mission_id\": \"test\",\n    \"notes\": \"he is sneaky!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/missions/test2/notes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"missions",
+								"test2",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete mission target",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mission_id\": \"test\",\n    \"target_name\": \"test_target\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/missions",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set target complete",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/missions/targets/test2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"missions",
+								"targets",
+								"test2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add cat",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cat_name\": \"test_cat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/missions/test/cat",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"missions",
+								"test",
+								"cat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get mission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/missions/test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"missions",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
